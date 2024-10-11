@@ -1,14 +1,12 @@
 <div class="max-w-2xl mx-auto mt-10 p-5 bg-white shadow-md rounded-lg">
     <h2 class="text-2xl font-bold mb-4">Employees List</h2>
 
-    <!-- Toggle button for 'Add New Employee' and 'View List' -->
     <button
         class="mb-4 px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50"
         (click)="toggleAddEmployee()">
         {{ isAddingEmployee ? 'View List' : 'Add New Employee' }}
     </button>
 
-    <!-- Add Employee Form -->
     <div *ngIf="isAddingEmployee" class="mb-4 p-4 border border-gray-300 rounded bg-gray-50">
         <h3 class="text-xl font-semibold mb-2">Add Employee</h3>
         <form (ngSubmit)="submitEmployee()" #employeeForm="ngForm">
@@ -45,19 +43,16 @@
                 </div>
             </div>
 
-            <!-- Submit button for the form -->
             <button type="submit"
                 class="px-4 py-2 bg-green-500 text-white rounded hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-opacity-50"
                 [disabled]="employeeForm.invalid">
                 Submit
             </button>
 
-            <!-- General Error Message Display -->
             <p *ngIf="errorMessage" class="mt-4 text-red-600">{{ errorMessage }}</p>
         </form>
     </div>
 
-    <!-- Employees List Table -->
     <table *ngIf="!isAddingEmployee" class="min-w-full bg-gray-100 border border-gray-300">
         <thead>
             <tr class="bg-gray-200">
