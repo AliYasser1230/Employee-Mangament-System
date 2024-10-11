@@ -1,9 +1,5 @@
 # Employee Management System
 
-## Overview
-A brief description of the project and its purpose. For example:
-This Employee Management System is a web application developed using Angular for the frontend and Node.js with Firebase for the backend. It allows users to add, view, and manage employee records efficiently.
-
 ## Features
 - Add new employees with their name, role, and joining date.
 - View a list of all employees.
